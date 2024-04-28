@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>
+            Joshua W's Assignment 2
+        </title>
+
+        <style>
+            .row {
+                width: 720px;
+                margin: 10px auto;
+            }
+            .image-container {
+                display: table-cell;
+                vertical-align: middle;
+                padding: 20px;
+                width: 150px; /* Adjust the width to your desired size */
+                height: 155px; /* Adjust the height to your desired size */
+                border-radius: 50%; /* Makes the container a circle */
+                overflow: hidden; /* Ensures the content stays within the circle */
+            }
+        </style>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js"></script>
+
+    </head>
+    
+    <body style="background-color: rgb(7, 6, 67);">
+        
+        <div class="row">
+            <!-- This is a comment. It won't appear in your page -->
+            <!-- This long line contains the code for the image roll 
+                over which swaps in an alternative image. You need to select the extra 
+                code and paste it in for each image. Make sure the page still works after pasting. 
+                Replace the template file names with your own filenames for icons, 
+                the rollover version of icons and sounds.d
+            -->
+
+
+
+            <div class="image-container"><img id="arm" src="img/arm1.png" onmouseover="this.src='img/arm2.png';" onmouseout="this.src='img/arm1.png';" width="200" height="200"/></div>
+            <div class="image-container"><img id="hologram" src="img/hologram1.png" onmouseover="this.src='img/hologram2.png';" onmouseout="this.src='img/hologram1.png';" width="200" height="200"/></div>
+            <div class="image-container"><img id="eyes" src="img/eyes1.png" onmouseover="this.src='img/eyes2.png';" onmouseout="this.src='img/eyes1.png';" width="200" height="200"/></div>
+        </div>
+
+        <div class="row">
+            <div class="image-container"><img id="city" src="img/city1.png" onmouseover="this.src='img/city2.png';" onmouseout="this.src='img/city1.png';" width="200" height="200"/></div>
+            <div class="image-container"><img id="qmark" src="img/qmark1.png" onmouseover="this.src='img/qmark2.png';" onmouseout="this.src='img/qmark1.png';" width="200" height="200"/></div>
+            <div class="image-container"><img id="leg" src="img/leg1.png" onmouseover="this.src='img/leg2.png';" onmouseout="this.src='img/leg1.png';" width="200" height="200"/></div>
+        </div>
+
+        <div class="row">
+            <div class="image-container"><img id="robot" src="img/robot1.png" onmouseover="this.src='img/robot2.png';" onmouseout="this.src='img/robot1.png';" width="200" height="200"/></div>
+            <div class="image-container"><img id="cyborg" src="img/cyborg1.png" onmouseover="this.src='img/cyborg2.png';" onmouseout="this.src='img/cyborg1.png';" width="200" height="200"/></div>
+            <div class="image-container"><img id="car" src="img/car1.png" onmouseover="this.src='img/car2.png';" onmouseout="this.src='img/car1.png';" width="200" height="200"/></div>
+        </div>
+
+        <script>
+            var sound1 = new buzz.sound("sound/lever.mp3");
+            var sound2 = new buzz.sound("sound/lockflick.mp3");
+            var sound3 = new buzz.sound("sound/eyes.mp3");
+            var sound4 = new buzz.sound("sound/train.mp3");
+            var sound5 = new buzz.sound("sound/qmark.mp3");
+            var sound6 = new buzz.sound("sound/lever2.mp3");
+            var sound7 = new buzz.sound("sound/activate.mp3");
+            var sound8 = new buzz.sound("sound/payphone.mp3");
+            var sound9 = new buzz.sound("sound/car.mp3");
+
+            window.onload = function() {
+                document.getElementById('arm').addEventListener('click', function () {sound1.play();});
+                document.getElementById('hologram').addEventListener('click', function () {sound2.play();});
+                document.getElementById('eyes').addEventListener('click', function () {sound3.play();});
+                document.getElementById('city').addEventListener('click', function () {sound4.play();});
+                document.getElementById('qmark').addEventListener('click', function () {sound5.play();});
+                document.getElementById('leg').addEventListener('click', function () {sound6.play();}); 
+                document.getElementById('robot').addEventListener('click', function () {sound7.play();});
+                document.getElementById('cyborg').addEventListener('click', function () {sound8.play();});
+                document.getElementById('car').addEventListener('click', function () {sound9.play();});
+            };
+        </script>
+
+    </body>
+
+</html>
+
